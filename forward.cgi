@@ -19,9 +19,9 @@ counter=0
   
 
 while 1:
-   data = bytearray([128])
+   data = bytearray([1])
    ser.write(data)
-   data = bytearray([255])
+   data = bytearray([128])
    ser.write(data)
 
 
