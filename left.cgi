@@ -21,4 +21,6 @@ counter=0
 while 1:
    data = bytearray([35])
    ser.write(data)
+   data = bytearray([190])
+   ser.write(data)
 
