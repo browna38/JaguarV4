@@ -34,6 +34,10 @@ elif action == "right":
 elif action == "left":
    speed1 = 63
    speed2 = 150
+  
+elif action == "reverse":
+   speed1 = 93
+   speed2 = 220
       
 
 
