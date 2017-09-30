@@ -41,10 +41,11 @@ elif action == "reverse":
       
 
 
-while 1:
-   data = bytearray([speed1])
-   ser.write(data)
-   data = bytearray([speed2])
-   ser.write(data)
+
+ data = bytearray([speed1])
+ ser.write(data)
+ time.sleep(1)
+ data = bytearray([speed2])
+ ser.write(data)
    
 
