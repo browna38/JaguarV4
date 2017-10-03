@@ -1,0 +1,59 @@
+git clone git://git.drogon.net/wiringPi
+
+cd wiringPi
+
+./build
+
+sudo mkdir /var/www
+
+sudo mkdir /var/www/cgi-bin
+
+cd /var/www/cgi-bin
+
+sudo git clone https://github.com/browna38/JaguarV4.git
+
+cd /var/www/cgi-bin/JaguarV4
+
+sudo mv *.cgi /var/www/cgi-bin
+
+sudo mv *.py /var/www/cgi-bin
+
+cd /var/www/cgi-bin
+
+sudo chmod 777 stop.cgi
+
+sudo chmod 777 forward.cgi
+
+sudo chmod 777 reverse.cgi
+
+sudo chmod 777 left.cgi
+
+sudo chmod 777 right.cgi
+
+sudo chmod 777 move.py
+
+sudo apt-get -y install lighttpd
+
+sudo lighttpd-enable-mod cgi
+
+sudo lighttpd-enable-mod fastcgi
+
+cd /var/www
+
+sudo git clone https://github.com/browna38/JaguarV4.git
+
+cd /var/www/cgi-bin/JaguarV4
+
+sudo mv *.html /var/www
+
+sudo chmod 777 index.html
+
+cd /var/www
+
+sudo git clone https://github.com/Mjrovai/MJRoBot-Web-RPi-Robot.git
+
+cd /var/www/MJRoBot-Web-RPi-Robot-master
+
+sudo mv images /var/www
+
+
